@@ -1,0 +1,62 @@
+@import '../../../../styles/global.scss';
+@import '../style.scss';
+
+.c-intro-notes__description {
+  height: 330px;
+  text-shadow: $text-shadow;
+  display: flex;
+  position: absolute;
+  top: 130px;
+  left: 50px;
+  & h2 {
+    width: 250px;
+    margin-top: 60px; // fix position
+    margin-right: 30px; // fix position
+    text-align: center;
+    line-height: 2.5rem;
+  }
+  & p {
+    width: 600px;
+    font-size: $fs-h5;
+  }
+}
+
+@mixin card-status($y, $maxY: 420px) {
+  width: 240px;
+  // height: 280px;
+  position: absolute;
+  right: ($maxY - $y) * 2.2;
+  bottom: $y;
+  display: flex;
+  flex-direction: column;
+  & h5 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  & figure {
+    width: 180px;
+    height: 180px;
+    margin-top: 15px;
+    align-self: center;
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &.active {
+    animation: $ani-fadein;
+  }
+}
+
+.c-intro-notes__card {
+  &0 {
+    @include card-status(320px);
+  }
+  &1 {
+    @include card-status(200px);
+  }
+  &2 {
+    @include card-status(60px);
+  }
+}

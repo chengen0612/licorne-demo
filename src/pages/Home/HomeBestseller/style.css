@@ -1,0 +1,142 @@
+/* @import '../../../styles/global.css'; */
+
+.total {
+  margin: 40px 0 50px;
+  width: auto;
+}
+
+.popular__title {
+  font-size: var(--fs-h3);
+}
+.popular__text {
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-light);
+}
+.popular__ranking {
+  width: 1635px;
+  display: flex;
+  column-gap: 40px;
+  margin: 80px auto 0;
+  padding-top: 20px;
+}
+
+.popular__customProduct {
+  border-radius: 165px;
+  width: 335px;
+  height: 535px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular__oneProduct {
+  width: 450px;
+  height: 700px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popular__oneProduct:nth-child(even) {
+  margin-top: 80px;
+}
+.popular__NoBox {
+  position: absolute;
+  align-self: start;
+  top: -60px;
+  left: -10px;
+}
+.popular__No {
+  height: 120px;
+}
+.popular__NoImg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.popular__custom-wrapper{
+  margin-top: -30px;
+}
+
+.popular__customImgBox {
+  width: 150px;
+  height: 310px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.popular__customImg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.popular__code {
+  font-size: var(--fs-h3);
+}
+.popular__price {
+  font-size: var(--fs-h5);
+}
+.popular__buyBtn {
+  width: 180px;
+  height: 60px;
+  margin-top: 45px;
+  border: unset;
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-light);
+  color: var(--c-primary);
+  border-radius: 30px;
+}
+.popular__buyBtn:hover {
+  /* filter: brightness(0.9); */
+  opacity: 0.8;
+  font-weight: var(--fw-medium);
+}
+.popular__aArrow {
+  font-size: 24px;
+  color: #223843;
+  text-decoration: none;
+  margin-right: 150px;
+}
+.popular__aArrow svg {
+  transform: translateX(2px) translateY(-3px) scale(1.5);
+}
+.popular__aArrow:hover {
+  filter: brightness(1.8);
+  color: #2e6e90;
+}
+/* product detail below */
+.popular__prod-detail {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  background: var(--c-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.popular__prod-detail span {
+  padding: 5px 0;
+  font-size: 20px;
+  display: inline-block;
+}
+.popular__prod-shadow {
+  width: 335px;
+  height: 535px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 165px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+}
+.popular__customProduct:hover .popular__prod-detail {
+  opacity: 0.85;
+}
+.popular__customProduct:hover .popular__prod-shadow {
+  opacity: 1;
+}

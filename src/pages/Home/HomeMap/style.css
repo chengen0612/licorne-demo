@@ -1,0 +1,146 @@
+/* @import '../../../styles/global.css'; */
+
+.map {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(http://localhost:3000/images/home/map.png) center center no-repeat; */
+}
+
+.map__card {
+  position: absolute;
+  top: 240px;
+  left: 140px;
+  width: 500px;
+  height: 600px;
+  background: var(--c-bg-locator);
+  border-radius: var(--br-s);
+  filter: var(--ds-card);
+  overflow: hidden;
+}
+
+.map__top {
+  padding: 40px 40px 30px 40px;
+  border-bottom: 1px solid var(--c-primary);
+}
+
+.map__top-title {
+  /* font: 600 28px; */
+  font-size: var(--fs-h3);
+}
+
+.map__search-bar {
+  width: 420px;
+  height: 60px;
+  background: var(--c-white);
+  border: 1px solid var(--c-primary);
+  border-radius: var(--br-s);
+  display: flex;
+  overflow: hidden;
+}
+
+.map__map-icon-top {
+  padding: 17px 23px;
+}
+
+.map__input {
+  flex-grow: 1;
+  border: none;
+  color: var(--c-primary);
+}
+
+/* remove border after focus */
+.map__input:focus {
+  outline: none;
+}
+
+.map__search-icon-top {
+  width: 50px;
+  height: auto;
+  padding: 14px 11px;
+  background: var(--c-primary);
+  cursor: pointer;
+}
+
+.map__search-icon {
+  stroke: var(--c-white);
+}
+
+.map__content {
+  height: 420px;
+  overflow-y: scroll;
+}
+
+/* scrollbar */
+.map__content::-webkit-scrollbar {
+  width: 12px;
+  /* height: 400px; */
+  background: var(--c-secondary);
+}
+
+.map__content::-webkit-scrollbar-thumb {
+  width: 8px;
+  /* height: 100px; */
+  margin: 2px;
+  background: var(--c-primary);
+  border-radius: 6px;
+}
+
+.map__item {
+  height: 210px;
+  padding: 44px 40px 46px;
+  font-size: var(--fs-span);
+  border-bottom: 1px solid var(--c-primary);
+  position: relative;
+}
+
+.map__item:last-child:not(:first-child) {
+  border-bottom: none;
+}
+
+.map__item-title {
+  margin-bottom: 15px;
+  font-size: var(--fs-h4);
+  font-weight: 600;
+}
+
+.map__item-intro {
+  /* float: left; */
+}
+
+.map__route-link {
+  border-bottom: 1px solid var(--c-primary);
+  line-height: 1;
+  position: absolute;
+  right: 46px;
+  bottom: 96px;
+}
+
+.map__store-btn {
+  width: 100px;
+  height: 35px;
+  background: var(--c-primary);
+  border: none;
+  border-radius: var(--br-s);
+  color: var(--c-white);
+  font-size: var(--fs-span);
+  font-weight: lighter;
+  position: absolute;
+  right: 28px;
+  bottom: 51px;
+}
+
+.home__map {
+  height: 100vh;
+  width: 100%;
+}
+
+.map__marker {
+  width: 50px;
+  height: 50px;
+}

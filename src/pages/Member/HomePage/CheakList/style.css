@@ -1,0 +1,64 @@
+.memberHomePage__cheakListBox {
+  width: 250px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 30px 37px auto auto;
+  background-color: #efefef;
+}
+.memberHomePage__cheakListBox hr {
+  width: 200px;
+  background-color: #223843;
+}
+.memberHomePage__makeTitle {
+  margin: 30px auto auto 30px;
+}
+.memberHomePage__totalBox {
+  display: flex;
+}
+.memberHomePage__totalAmount {
+  font-weight: lighter;
+  margin: 20px 0 0 38px;
+}
+.memberHomePage__totalNumber {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.memberHomePage__goPayBtn {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #223843;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  outline: none;
+  border: 1px solid transparent;
+  margin: 40px 50px auto 50px;
+}
+.memberHomePage__productList {
+  list-style: none;
+  margin: 0 10px 0 30px;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 215px;
+  height: 300px;
+}
+.memberHomePage__productList__MyCartOffcialText,
+.memberHomePage__productList__MyCartCustomText {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+.memberHomePage__product {
+  font-weight: lighter;
+}
+.memberHomePage__cheakListLine {
+  margin: 20px auto;
+}
+.memberHomePage__goPayBtn:hover,
+.memberProduct__fav__item__btn:hover {
+  filter: brightness(1.3);
+  transition: 0.3s;
+}

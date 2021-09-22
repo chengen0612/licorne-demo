@@ -1,0 +1,61 @@
+@import '../../../../styles/global.scss';
+@import '../style.scss';
+
+.c-intro-basis-intro {
+  width: 400px;
+  height: 510px;
+  text-shadow: $text-shadow;
+  position: absolute;
+  top: 108px;
+  left: 128px;
+  & h2 {
+    font-weight: bold;
+    line-height: 4rem;
+  }
+  & p {
+    font-size: $fs-h5;
+  }
+}
+
+// images
+.c-intro__img-alcohol {
+  width: 82px;
+  height: 298px;
+  position: absolute;
+  top: 42vh;
+  left: 55vw;
+  animation: $ani-fadein;
+}
+.c-intro__img-water {
+  width: 150px;
+  height: 200px;
+  position: absolute;
+  top: 50vh;
+  left: 53vw;
+  animation: $ani-fadein;
+}
+@mixin oil ($top, $left){
+  width: 200px;
+  height: 240px;
+  position: absolute;
+  top: $top;
+  left: $left;
+  animation: $ani-fadein;
+}
+.c-intro__img-oil-lavender {
+  @include oil(32vh, 45vw);
+}
+.c-intro__img-oil-herb {
+  @include oil(40vh, 61vw);
+}
+.c-intro__img-oil-orange {
+  @include oil(57vh, 51vw);
+}
+.c-intro__img-finished {
+  width: 347px;
+  height: 420px;
+  position: absolute;
+  top: 34vh;
+  left: 47vw;
+  animation: $ani-fadein;
+}
