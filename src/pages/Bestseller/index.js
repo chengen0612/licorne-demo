@@ -13,7 +13,7 @@ import Filters from './Filters'
 
 function Bestseller() {
   // state for spinner
-  const [isAmount, setIsAmount] = useState(false)
+  const [didMount, setDidMount] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
   // state for filters
@@ -90,13 +90,13 @@ function Bestseller() {
     newData = manipulateDataByUserOptions(newData)
     updateDisplay(newData)
 
-    setIsAmount(true)
+    setDidMount(true)
   }, [])
 
   // update display when filter is changed
   /* eslint-disable */
   useEffect(() => {
-    if (isAmount === false) return
+    if (didMount === false) return
     setIsLoading(true)
     let newData = [...initData]
     newData = manipulateDataByUserOptions(newData)

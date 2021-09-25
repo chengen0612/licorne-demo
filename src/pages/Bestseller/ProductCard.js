@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 
 import { baseUrl } from '../../config'
 import myswal from '../../utils/sweetalert'
-import authentication from '../../utils/authentication'
 
 function ProductCard(props) {
   const { data } = props
-
-  // const [showDetail, setShowDetail] = useState(false)
 
   const {
     cust_id,
@@ -24,17 +20,12 @@ function ProductCard(props) {
     sequence,
   } = data
 
-  // reset related elements state
-  // useEffect(() => {
-  //   setShowDetail(false)
-  // }, [data])
-
   const purchaseHandler = async () => {
     myswal.addCart()
   }
 
   // add comma to price
-  function numberWithCommas(x) {
+  function addCommasToNumber(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   }
 
@@ -44,16 +35,11 @@ function ProductCard(props) {
         <figure className="best__prod-sequence">
           <img src={baseUrl + `/images/bestseller/${sequence}.svg`} alt="" />
         </figure>
-        <div
-          className="best__prod-display"
-          style={{ background: color }}
-          // onClick={() => setShowDetail(!showDetail)}
-          // title={!showDetail && '點擊查看說明'}
-        >
+        <div className="best__prod-display" style={{ background: color }}>
           <img src={baseUrl + bottle_img} alt={cust_id} />
           <h3 className="best__prod-title">{cust_id}</h3>
           <span className="best__prod-price">
-            NT ${numberWithCommas(price)}
+            NT ${addCommasToNumber(price)}
           </span>
           <div className="best__prod-shadow"></div>
           <div className="best__prod-detail">
