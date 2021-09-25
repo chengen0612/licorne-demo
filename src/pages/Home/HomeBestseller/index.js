@@ -1,28 +1,39 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import { FiArrowRight } from 'react-icons/fi'
 
 import './style.css'
+import initData from '../../../data/bestseller/bestseller.json'
+
 import HomeBestsellerProduct from './components/HomeBestsellerProduct'
 
 function HomeBestseller() {
   const [productData, setProductData] = useState([])
 
   useEffect(() => {
-    getDataFromServer()
+    const initData = getDataFromJson()
+    const response = pickUpProducts(initData)
+    addSequenceProperty(response)
+    setProductData(response)
   }, [])
 
-  const getDataFromServer = async () => {
-    const url = 'http://localhost:6005/home/bestseller'
-    const response = await axios.get(url)
-    const data = response.data
-    // pick up top 4 to display on the screen
-    let output = []
-    for (let i = 0; i <= 3; i++) {
-      output.push(data[i])
+  const getDataFromJson = () => {
+    Object.freeze(initData)
+    return initData
+  }
+
+  const pickUpProducts = (products) => {
+    let response = []
+    for (let i = 0; i < 4; i++) {
+      response.push(products[i])
     }
-    setProductData(output)
+    return response
+  }
+
+  const addSequenceProperty = (products) => {
+    products.forEach((product, i) => {
+      product['sequence'] = i + 1
+    })
   }
 
   return (

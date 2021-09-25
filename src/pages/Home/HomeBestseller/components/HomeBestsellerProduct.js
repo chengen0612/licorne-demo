@@ -1,6 +1,6 @@
 import React from 'react'
-import axios from 'axios'
 import { baseUrl } from '../../../../config/index'
+import myswal from '../../../../utils/sweetalert'
 
 function HomeBestsellerProduct(props) {
   const { data } = props
@@ -18,10 +18,8 @@ function HomeBestsellerProduct(props) {
     sequence,
   } = data
 
-  const purchaseHandler = async () => {
-    const url = 'http://localhost:6005/bestseller/addcart'
-    const response = await axios.post(url, { data: data })
-    const result = response.data
+  const purchaseHandler = () => {
+    myswal.addCart()
   }
 
   // add comma to price
