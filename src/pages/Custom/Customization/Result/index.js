@@ -11,7 +11,6 @@ import {
 
 import { baseUrl } from '../../../../config'
 import myswal from '../../../../utils/sweetalert'
-import authentication from '../../../../utils/authentication'
 
 import './style.scss'
 
@@ -32,47 +31,13 @@ function Result(props) {
   } = productDetail
 
   const purchaseHandler = async () => {
-    const executor = async (token) => {
-      const url = 'http://localhost:6005/custom/addcart'
-      const request = new Request(url, {
-        method: 'POST',
-        body: JSON.stringify(productDetail),
-        headers: new Headers({
-          Accept: 'application/json',
-          'Content-Type': 'application/json; charset=UTF-8',
-          Authorization: 'Bearer ' + token,
-        }),
-      })
-      // console.log(request)
-      const response = await fetch(request)
-      const result = await response.json()
-
-      if (result) myswal.addCart()
-    }
-
-    authentication(executor)
+    // remove http request and validation for demo
+    myswal.addCart()
   }
 
   const collectHandler = async () => {
-    const executor = async (token) => {
-      const url = 'http://localhost:6005/custom/addfavorite'
-      const request = new Request(url, {
-        method: 'POST',
-        body: JSON.stringify(productDetail),
-        headers: new Headers({
-          Accept: 'application/json',
-          'Content-Type': 'application/json; charset=UTF-8',
-          Authorization: 'Bearer ' + token,
-        }),
-      })
-      // console.log(request)
-      const response = await fetch(request)
-      const result = await response.json()
-
-      if (result) myswal.addCollection()
-    }
-
-    authentication(executor)
+    // remove http request and validation for demo
+    myswal.addCollection()
   }
 
   return (

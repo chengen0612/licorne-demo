@@ -5,6 +5,8 @@ import { FiX, FiRefreshCw, FiSkipBack, FiCheckSquare } from 'react-icons/fi'
 import myswal from '../../../../utils/sweetalert'
 
 import './style.scss'
+import ingredientData from '../../../../data/customization/ingredientData.json'
+import fragranceData from '../../../../data/customization/fragranceData.json'
 
 import SidebarSeries from './SidebarSeries'
 import SidebarItems from './SidebarItems'
@@ -31,27 +33,20 @@ function Process(props) {
   const [currentNote, setCurrentNote] = useState(noteList[0])
 
   // get data
-  async function getDataFromServer() {
-    const url = 'http://localhost:6005/custom'
-    const request = new Request({
-      method: 'GET',
-      headers: new Headers({
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      }),
-    })
-
-    const reponse = await fetch(url, request)
-    const data = await reponse.json()
-    console.log(data)
-
-    setItemsData(data.ingredientData)
-    setSeriesData(data.fragranceData)
+  const getDataFromJson = () => {
+    return { ingredientData, fragranceData }
   }
 
-  // set data after first loading
+  const saveInitData = (data) => {
+    const { ingredientData, fragranceData } = data
+    setItemsData(ingredientData)
+    setSeriesData(fragranceData)
+  }
+
+  // first loading
   useEffect(() => {
-    getDataFromServer()
+    const initData = getDataFromJson()
+    saveInitData(initData)
   }, [])
 
   // handle description
