@@ -30,18 +30,7 @@ function ProductCard(props) {
   // }, [data])
 
   const purchaseHandler = async () => {
-    const executor = async (token) => {
-      const url = 'http://localhost:6005/bestseller/addcart'
-      const response = await axios.post(url, {
-        data: data,
-        headers: { Authorization: 'Bearer ' + token },
-      })
-      const result = response.data
-
-      if (result) myswal.addCart()
-    }
-
-    authentication(executor)
+    myswal.addCart()
   }
 
   // add comma to price

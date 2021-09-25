@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 
 import './style.scss'
+import jsonData from '../../data/bestseller/bestseller.json'
 
 // public components
 import Spinner from './Spinner'
@@ -21,32 +21,86 @@ function Bestseller() {
   const [sortBy, setSortBy] = useState('每月人氣銷售')
 
   // state for display
+  const [initData, setInitData] = useState([])
   const [display, setDisplay] = useState([])
   const [otherProducts, setOtherProducts] = useState([]) // products not in top three
 
-  const getDataFromServer = async () => {
-    const params = { params: { sortBy: sortBy, checkedSeries: checkedSeries } }
-    const url = 'http://localhost:6005/bestseller'
-    const response = await axios.get(url, params)
-    const data = response.data
-    const [first, second, third, ...others] = data
+  const getDataFromJson = () => {
+    Object.freeze(jsonData)
+    return jsonData
+  }
 
+  const updateDisplay = (data) => {
+    const [first, second, third, ...others] = data
     setDisplay(data)
     setOtherProducts(others)
   }
 
+  const manipulateDataByUserOptions = (data) => {
+    data = checkedSeries.length ? selectDataBySeries(data) : data
+    sortDataBySortBy(data)
+    data = sliceTopFifteen(data)
+    addSequenceProperty(data)
+
+    return data
+  }
+
+  const selectDataBySeries = (data) => {
+    let response = []
+    for (let i = 0; i < checkedSeries.length; i++) {
+      const result = data.filter((item) => item.serie_zh === checkedSeries[i])
+      response = [...response, ...result]
+    }
+    return response
+  }
+
+  const sortDataBySortBy = (data) => {
+    switch (sortBy) {
+      case '價格由高至低':
+        data.sort((a, b) => b.price - a.price)
+        break
+      case '價格由低至高':
+        data.sort((a, b) => a.price - b.price)
+        break
+      default:
+        // '每月人氣銷售'
+        data.sort((a, b) => b.popularity - a.popularity)
+        break
+    }
+  }
+
+  const sliceTopFifteen = (data) => {
+    const quantity = Math.min(data.length, 15)
+    const response = data.slice(0, quantity)
+    return response
+  }
+
+  const addSequenceProperty = (data) => {
+    data.forEach((item, i) => {
+      item['sequence'] = i + 1
+    })
+  }
+
   // first render
   useEffect(() => {
-    getDataFromServer()
+    const data = getDataFromJson()
+    setInitData(data)
+
+    let newData = [...data]
+    newData = manipulateDataByUserOptions(newData)
+    updateDisplay(newData)
+
     setIsAmount(true)
   }, [])
 
-  // update by filter options
+  // update display when filter is changed
   /* eslint-disable */
   useEffect(() => {
     if (isAmount === false) return
     setIsLoading(true)
-    getDataFromServer()
+    let newData = [...initData]
+    newData = manipulateDataByUserOptions(newData)
+    updateDisplay(newData)
     setTimeout(() => { setIsLoading(false) }, 500)
   }, [checkedSeries, sortBy])
   /* eslint-enable */
