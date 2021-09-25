@@ -209,12 +209,9 @@ function Header() {
             <Link to="/">LICORNE</Link>
           </h1>
           {/* -- header icon -- */}
-          <div className="header__icon-border">
+          {/* <div className="header__icon-border">
             <div className="icon">
               <div className="header__rwd-icon-1">
-                {/* <div role="button">
-                  <FiSearch className="header-i" />
-                </div> */}
                 <Link to={didLogin ? '/member' : '/login'}>
                   {didLogin ? (
                     <FiUserCheck className="header-i" />
@@ -242,7 +239,7 @@ function Header() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="header__menu">
@@ -252,26 +249,26 @@ function Header() {
                 客製香水
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/course" activeClassName="menu-foucs">
                 課程體驗
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/bestseller" activeClassName="menu-foucs">
                 人氣熱銷
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/official" activeClassName="menu-foucs">
                 官方經典
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink to="/quiz" activeClassName="menu-foucs">
                 專屬香氣
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </header>
