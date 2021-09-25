@@ -102,7 +102,6 @@
 }
 .popular__aArrow:hover {
   filter: brightness(1.8);
-  color: #2e6e90;
 }
 /* product detail below */
 .popular__prod-detail {
