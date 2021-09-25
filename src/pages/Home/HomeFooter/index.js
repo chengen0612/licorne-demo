@@ -15,13 +15,15 @@ function Footer() {
         <div className="footer__listBox">
           <ul className="footer__topList">
             <li>
-              <Link to="/">關於我們</Link>
+              {/* <Link to="/">關於我們</Link> */}
+              關於我們
             </li>
             <li>
               <Link to="/custom/entrance">客製香水</Link>
             </li>
             <li>
-              <Link to="/course">課程體驗</Link>
+              {/* <Link to="/course">課程體驗</Link> */}
+              課程體驗
             </li>
             <li>
               <Link to="/bestseller">人氣熱銷</Link>
@@ -29,13 +31,16 @@ function Footer() {
           </ul>
           <ul className="footer__bottomList">
             <li>
-              <Link to="/official">官方經典</Link>
+              {/* <Link to="/official">官方經典</Link> */}
+              官方經典
             </li>
             <li>
-              <Link to="/quiz">專屬香氣</Link>
+              {/* <Link to="/quiz">專屬香氣</Link> */}
+              專屬香氣
             </li>
             <li>
-              <Link to="/">實體店舖</Link>
+              {/* <Link to="/">實體店舖</Link> */}
+              實體店舖
             </li>
           </ul>
         </div>
