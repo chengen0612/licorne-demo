@@ -21,13 +21,15 @@ function SecondaryFooter() {
         <div className="secondaryFooter__listBox">
           <ul className="secondaryFooter__topList">
             <li>
-              <Link to="/">關於我們</Link>
+              {/* <Link to="/">關於我們</Link> */}
+              關於我們
             </li>
             <li>
               <Link to="/custom/entrance">客製香水</Link>
             </li>
             <li>
-              <Link to="/course/list">課程體驗</Link>
+              {/* <Link to="/course/list">課程體驗</Link> */}
+              課程體驗
             </li>
             <li>
               <Link to="/bestseller">人氣熱銷</Link>
@@ -35,13 +37,16 @@ function SecondaryFooter() {
           </ul>
           <ul className="secondaryFooter__bottomList">
             <li>
-              <Link to="/official">官方經典</Link>
+              {/* <Link to="/official">官方經典</Link> */}
+              官方經典
             </li>
             <li>
-              <Link to="/quiz">專屬香氣</Link>
+              {/* <Link to="/quiz">專屬香氣</Link> */}
+              專屬香氣
             </li>
             <li>
-              <Link to="/">實體店舖</Link>
+              {/* <Link to="/">實體店舖</Link> */}
+              實體店舖
             </li>
           </ul>
         </div>
@@ -62,7 +67,7 @@ function SecondaryFooter() {
             Copyright © Licorne Co., 2021. All rights reserved.
           </p>
         </div>
-        <div className="secondaryFooter__icon">
+        {/* <div className="secondaryFooter__icon">
           <button className="secondaryFooter__button">
             <FiFacebook className="secondaryFooter__facebook" />
           </button>
@@ -75,7 +80,7 @@ function SecondaryFooter() {
           <button className="secondaryFooter__button">
             <FiArrowUpCircle className="secondaryFooter__arrow" />
           </button>
-        </div>
+        </div> */}
       </footer>
     </>
   )
