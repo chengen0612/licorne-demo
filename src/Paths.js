@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Route, Switch, useLocation, useHistory } from 'react-router-dom'
 import myswal from './utils/sweetalert'
 
+import baseUrl from './config/index'
+
 // 共通元件
 import Header from './components/Header'
 import SecondaryFooter from './components/SecondaryFooter'
@@ -47,7 +49,7 @@ function Paths() {
   useEffect(() => {
     // require auth ?
     const params = pathname.split('/')[1]
-    const index = authRequiredList.findIndex((value) => value === params)
+    const index = authRequiredList.findIndex((value) => params.includes(value))
     if (index === -1) return
     // logged or not
     const auth = localStorage.getItem('jwt')
@@ -63,13 +65,13 @@ function Paths() {
   }, [location])
 
   const handleHeader = () => {
-    const index = noHeaderList.findIndex((value) => value === pathname)
+    const index = noHeaderList.findIndex((value) => pathname.includes(value))
     index > -1 ? setUseHeader(false) : setUseHeader(true)
   }
 
   const handleSpinner = () => {
     if (!didMount) return
-    const index = noSpinnerList.findIndex((value) => value === pathname)
+    const index = noSpinnerList.findIndex((value) => pathname.includes(value))
     if (index > -1) return
     setIsLoading(true)
     setTimeout(() => {
@@ -85,7 +87,7 @@ function Paths() {
           <Route path="/course">
             <SwitchCourse />
           </Route>
-          <Route path="/custom">
+          <Route path={baseUrl + '/custom'}>
             <SwitchCustom />
           </Route>
 
@@ -97,7 +99,7 @@ function Paths() {
           <Route path="/official">
             <Official />
           </Route>
-          <Route path="/bestseller">
+          <Route path={baseUrl + '/bestseller'}>
             <Bestseller />
           </Route>
           <Route path="/quiz">
@@ -118,7 +120,7 @@ function Paths() {
             <LoginAndRegister />
             <SecondaryFooter />
           </Route>
-          <Route exact path="/">
+          <Route exact path={baseUrl}>
             <Home />
           </Route>
         </Switch>
