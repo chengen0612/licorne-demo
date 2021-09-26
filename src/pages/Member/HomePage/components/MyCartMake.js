@@ -2,7 +2,7 @@ import React from 'react'
 import '../../../../styles/global.css'
 import '../style.css'
 import { FiHeart, FiShoppingBag } from 'react-icons/fi'
-import { baseUrl } from '../../../../config'
+import baseUrl from '../../../../config/index'
 import MyCartMakeItem from './MyCartFavMakeItem'
 
 function MyCartMake({

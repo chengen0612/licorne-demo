@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import '../style.css'
-import { baseUrl } from '../../../config'
+import baseUrl from '../../../config/index'
 
 function Results({ result }) {
   const history = useHistory()

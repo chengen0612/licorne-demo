@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { baseUrl } from '../../config/index'
+import baseUrl from '../../config/index'
 
 import './style.scss'
 

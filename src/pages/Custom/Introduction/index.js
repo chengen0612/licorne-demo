@@ -9,6 +9,7 @@ import {
   FiDroplet,
 } from 'react-icons/fi'
 
+import baseUrl from '../../../config/index'
 import './style.scss'
 
 // import components
@@ -135,12 +136,12 @@ function Introduction() {
               onClick={nextPageExecutor}
               className="c-intro__next-page-btn"
             />
-            <Link to="/custom/process">
+            <Link to={baseUrl + '/custom/process'}>
               <button className="c-intro__skip-btn">跳過介紹</button>
             </Link>
           </>
         )}
-        <Link to="/">
+        <Link to={baseUrl}>
           <FiX className="c-intro__close-btn" />
         </Link>
         {renderDrops()}

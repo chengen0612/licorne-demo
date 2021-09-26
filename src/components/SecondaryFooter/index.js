@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import baseUrl from '../../config/index'
 import './style.css'
 import imgURL from './imgs/LICORNE_logo.svg'
 import {
@@ -14,7 +15,7 @@ function SecondaryFooter() {
     <>
       <footer className="secondaryFooter__style">
         <div className="secondaryFooter__logoBox">
-          <Link to="/">
+          <Link to={baseUrl}>
             <img className="secondaryFooter__logo" src={imgURL} alt="" />
           </Link>
         </div>
@@ -25,14 +26,14 @@ function SecondaryFooter() {
               關於我們
             </li>
             <li>
-              <Link to="/custom/entrance">客製香水</Link>
+              <Link to={baseUrl +"/custom/entrance"}>客製香水</Link>
             </li>
             <li>
               {/* <Link to="/course/list">課程體驗</Link> */}
               課程體驗
             </li>
             <li>
-              <Link to="/bestseller">人氣熱銷</Link>
+              <Link to={baseUrl + "/bestseller"}>人氣熱銷</Link>
             </li>
           </ul>
           <ul className="secondaryFooter__bottomList">

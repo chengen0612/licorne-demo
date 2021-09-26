@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FiSearch, FiMapPin, FiX } from 'react-icons/fi'
-import { baseUrl } from '../../../config'
+import baseUrl from '../../../config/index'
 import GoogleMapReact from 'google-map-react'
 import CourseClassRoom from './CourseClassRoom'
 

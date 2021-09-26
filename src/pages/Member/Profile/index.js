@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './style.css'
 import { FiEdit } from 'react-icons/fi'
-import { baseUrl } from '../../../config'
+import baseUrl from '../../../config/index'
 import UploadPreview from '../components/UploadImgPreview'
 import swal from 'sweetalert'
 import authentication from '../../../utils/authentication'

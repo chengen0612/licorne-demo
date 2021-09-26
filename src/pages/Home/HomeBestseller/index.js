@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 
+import baseUrl from '../../../config/index'
 import './style.css'
 import initData from '../../../data/bestseller/bestseller.json'
 
@@ -56,7 +57,7 @@ function HomeBestseller() {
         {/* <!-- 商品區塊 --> */}
         {/* <!-- 前往排行榜區塊 --> */}
         <div className="d-flex justify-content-end">
-          <Link className="popular__aArrow" to="/bestseller">
+          <Link className="popular__aArrow" to={baseUrl + '/bestseller'}>
             前往排行榜 <FiArrowRight />
           </Link>
         </div>

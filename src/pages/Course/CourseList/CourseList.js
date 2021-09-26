@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './CourseList.css'
-import { baseUrl } from '../../../config'
+import baseUrl from '../../../config/index'
 import authentication from '../../../utils/authentication'
 import CourseContent from './CourseContent'
 import CourseForm from './CourseForm'

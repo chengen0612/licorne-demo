@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { baseUrl } from '../../../../config/index'
+import baseUrl from '../../../../config/index'
 import { topNote, middleNote, baseNote } from './data'
 import './style.scss'
 

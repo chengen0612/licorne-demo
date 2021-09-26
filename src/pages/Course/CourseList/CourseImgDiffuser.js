@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { baseUrl } from '../../../config'
+import baseUrl from '../../../config/index'
 
 function CourseDiffuser() {
   // 接收資料庫傳來的資料，並讓資料可以設定

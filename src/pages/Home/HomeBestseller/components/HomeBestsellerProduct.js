@@ -1,5 +1,5 @@
 import React from 'react'
-import { baseUrl } from '../../../../config/index'
+import baseUrl from '../../../../config/index'
 import myswal from '../../../../utils/sweetalert'
 
 function HomeBestsellerProduct(props) {

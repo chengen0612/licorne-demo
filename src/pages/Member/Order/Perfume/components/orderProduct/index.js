@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 import { FiEdit } from 'react-icons/fi'
-import { baseUrl } from '../../../../../../config'
+import baseUrl from '../../../../../../config/index'
 
 function MemberLeftCard(props) {
   const { name_zh, name_en, img_id, seriesName, price, volume, quantity } =

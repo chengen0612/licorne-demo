@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import './style.css'
 import { FiEdit } from 'react-icons/fi'
-import { baseUrl } from '../../../config'
+import baseUrl from '../../../config/index'
 import { useHistory, useLocation } from 'react-router-dom'
 import swal from 'sweetalert'
 

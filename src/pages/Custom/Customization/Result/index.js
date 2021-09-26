@@ -9,7 +9,7 @@ import {
   FiUpload,
 } from 'react-icons/fi'
 
-import { baseUrl } from '../../../../config'
+import baseUrl from '../../../../config/index'
 import myswal from '../../../../utils/sweetalert'
 
 import './style.scss'
@@ -53,7 +53,7 @@ function Result(props) {
             {serieName}&nbsp;&nbsp;{productCode}
           </span>
         </div>
-        <Link to="/">
+        <Link to={baseUrl}>
           <FiX className="cust__close-btn" />
         </Link>
         <article className="cust__description blob-orange">

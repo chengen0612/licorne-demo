@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style.css'
-import { baseUrl } from '../../../config'
+import baseUrl from '../../../config/index'
 
 function Start({ changeHandler }) {
   return (

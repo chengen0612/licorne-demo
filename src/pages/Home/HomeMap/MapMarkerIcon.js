@@ -1,5 +1,5 @@
 import React from 'react'
-import { baseUrl } from '../../../config/index'
+import baseUrl from '../../../config/index'
 
 export default function MapMarkerIcon(props) {
   const { data, setSelectedShop } = props

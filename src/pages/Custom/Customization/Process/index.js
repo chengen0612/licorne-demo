@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { FiX, FiRefreshCw, FiSkipBack, FiCheckSquare } from 'react-icons/fi'
+import baseUrl from '../../../../config/index'
 import myswal from '../../../../utils/sweetalert'
 
 import './style.scss'
@@ -141,7 +142,7 @@ function Process(props) {
           ))}
         </div>
         {/* progress bar end */}
-        <Link to="/" draggable="false">
+        <Link to={baseUrl} draggable="false">
           <FiX className="cust__close-btn" />
         </Link>
         <article className="cust__description">

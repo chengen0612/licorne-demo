@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './style.scss'
-import { baseUrl } from '../../config'
+import baseUrl from '../../config/index'
 import { Link } from 'react-router-dom'
 import Sidebar from './Sidebar'
 

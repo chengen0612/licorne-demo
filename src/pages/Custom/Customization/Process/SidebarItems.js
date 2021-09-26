@@ -1,5 +1,5 @@
 import React from 'react'
-import { baseUrl } from '../../../../config'
+import baseUrl from '../../../../config/index'
 
 function SidebarItems(props) {
   const { data, displaySerie } = props

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, Link, NavLink, useLocation } from 'react-router-dom'
+import baseUrl from '../../config/index'
 import myswal from '../../utils/sweetalert'
 
 import './style.css'
@@ -206,7 +207,7 @@ function Header() {
         {/* -- logo -- */}
         <div className="header__top">
           <h1 className="logo" role="button">
-            <Link to="/">LICORNE</Link>
+            <Link to={baseUrl}>LICORNE</Link>
           </h1>
           {/* -- header icon -- */}
           {/* <div className="header__icon-border">
@@ -245,7 +246,7 @@ function Header() {
         <div className="header__menu">
           <ul className="header__menu__list">
             <li>
-              <NavLink to="/custom/entrance" activeClassName="menu-foucs">
+              <NavLink to={baseUrl +"/custom/entrance"} activeClassName="menu-foucs">
                 客製香水
               </NavLink>
             </li>
@@ -255,7 +256,7 @@ function Header() {
               </NavLink>
             </li> */}
             <li>
-              <NavLink to="/bestseller" activeClassName="menu-foucs">
+              <NavLink to={baseUrl + "/bestseller"} activeClassName="menu-foucs">
                 人氣熱銷
               </NavLink>
             </li>
