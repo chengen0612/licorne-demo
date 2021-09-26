@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/licorne-demo/static/css/main.0296fb40.chunk.css",
-    "main.js": "/licorne-demo/static/js/main.3fb74f29.chunk.js",
-    "main.js.map": "/licorne-demo/static/js/main.3fb74f29.chunk.js.map",
+    "main.js": "/licorne-demo/static/js/main.bc308d1f.chunk.js",
+    "main.js.map": "/licorne-demo/static/js/main.bc308d1f.chunk.js.map",
     "runtime-main.js": "/licorne-demo/static/js/runtime-main.13d3ecc6.js",
     "runtime-main.js.map": "/licorne-demo/static/js/runtime-main.13d3ecc6.js.map",
     "static/js/2.8f463c86.chunk.js": "/licorne-demo/static/js/2.8f463c86.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.13d3ecc6.js",
     "static/js/2.8f463c86.chunk.js",
     "static/css/main.0296fb40.chunk.css",
-    "static/js/main.3fb74f29.chunk.js"
+    "static/js/main.bc308d1f.chunk.js"
   ]
 }
