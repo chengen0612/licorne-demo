@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/licorne-demo/static/css/main.0296fb40.chunk.css",
-    "main.js": "/licorne-demo/static/js/main.bf221ae8.chunk.js",
-    "main.js.map": "/licorne-demo/static/js/main.bf221ae8.chunk.js.map",
-    "runtime-main.js": "/licorne-demo/static/js/runtime-main.13d3ecc6.js",
-    "runtime-main.js.map": "/licorne-demo/static/js/runtime-main.13d3ecc6.js.map",
-    "static/js/2.8f463c86.chunk.js": "/licorne-demo/static/js/2.8f463c86.chunk.js",
-    "static/js/2.8f463c86.chunk.js.map": "/licorne-demo/static/js/2.8f463c86.chunk.js.map",
-    "static/js/3.a0a98f49.chunk.js": "/licorne-demo/static/js/3.a0a98f49.chunk.js",
-    "static/js/3.a0a98f49.chunk.js.map": "/licorne-demo/static/js/3.a0a98f49.chunk.js.map",
+    "main.css": "/licorne-demo/static/css/main.99dfa355.chunk.css",
+    "main.js": "/licorne-demo/static/js/main.6aae7eab.chunk.js",
+    "main.js.map": "/licorne-demo/static/js/main.6aae7eab.chunk.js.map",
+    "runtime-main.js": "/licorne-demo/static/js/runtime-main.4656bf79.js",
+    "runtime-main.js.map": "/licorne-demo/static/js/runtime-main.4656bf79.js.map",
+    "static/css/2.a9146c40.chunk.css": "/licorne-demo/static/css/2.a9146c40.chunk.css",
+    "static/js/2.6c78c23e.chunk.js": "/licorne-demo/static/js/2.6c78c23e.chunk.js",
+    "static/js/2.6c78c23e.chunk.js.map": "/licorne-demo/static/js/2.6c78c23e.chunk.js.map",
+    "static/js/3.fb568546.chunk.js": "/licorne-demo/static/js/3.fb568546.chunk.js",
+    "static/js/3.fb568546.chunk.js.map": "/licorne-demo/static/js/3.fb568546.chunk.js.map",
     "index.html": "/licorne-demo/index.html",
-    "static/css/main.0296fb40.chunk.css.map": "/licorne-demo/static/css/main.0296fb40.chunk.css.map",
-    "static/js/2.8f463c86.chunk.js.LICENSE.txt": "/licorne-demo/static/js/2.8f463c86.chunk.js.LICENSE.txt",
+    "static/css/2.a9146c40.chunk.css.map": "/licorne-demo/static/css/2.a9146c40.chunk.css.map",
+    "static/css/main.99dfa355.chunk.css.map": "/licorne-demo/static/css/main.99dfa355.chunk.css.map",
+    "static/js/2.6c78c23e.chunk.js.LICENSE.txt": "/licorne-demo/static/js/2.6c78c23e.chunk.js.LICENSE.txt",
     "static/media/LICORNE_logo.9b731315.svg": "/licorne-demo/static/media/LICORNE_logo.9b731315.svg",
     "static/media/style.css": "/licorne-demo/static/media/background1080.3206022d.png",
     "static/media/banner4.89199749.mp4": "/licorne-demo/static/media/banner4.89199749.mp4",
@@ -20,9 +22,10 @@
     "static/media/home-course3.5e344473.jpg": "/licorne-demo/static/media/home-course3.5e344473.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.13d3ecc6.js",
-    "static/js/2.8f463c86.chunk.js",
-    "static/css/main.0296fb40.chunk.css",
-    "static/js/main.bf221ae8.chunk.js"
+    "static/js/runtime-main.4656bf79.js",
+    "static/css/2.a9146c40.chunk.css",
+    "static/js/2.6c78c23e.chunk.js",
+    "static/css/main.99dfa355.chunk.css",
+    "static/js/main.6aae7eab.chunk.js"
   ]
 }
