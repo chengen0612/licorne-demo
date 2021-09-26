@@ -1,9 +1,11 @@
 const domainName = {
-  debug: true,
+  debug: false,
   develop: 'http://localhost:3000',
-  release: '',
+  release: '/licorne-demo',
 }
 
-const baseUrl = domainName.debug ? domainName.develop : domainName.release
+const baseUrl = domainName['debug']
+  ? domainName['develop']
+  : domainName['release']
 
-export { baseUrl }
+export default baseUrl
